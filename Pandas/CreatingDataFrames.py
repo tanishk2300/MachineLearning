@@ -25,4 +25,34 @@ c = pd.DataFrame(arr, columns=["A", "B"])
 print(c)
 
 #From CSV Files
+f=pd.read_csv("data.csv", usecols=["Name", "Age"])
+print(f)
 
+# From Excel Files
+g = pd.read_excel("data.xlsx")
+print(g)
+
+# From JSON
+h = pd.read_json("data.json")
+print(h)
+
+# From SQL Databases
+import sqlite3
+
+conn = sqlite3.connect("mydb.sqlite")
+i = pd.read_sql("SELECT * FROM users", conn)
+print(i)
+
+
+# From the Web (Example: CSV from URL)
+url = "https://raw.githubusercontent.com/mwaskom/seaborn-data/master/tips.csv"
+j = pd.read_csv(url)
+print(j)
+
+# EDA (Exploratory Data Analysis)
+b.head()         # First 5 rows
+b.tail()         # Last 5 rows
+b.info()         # Column info: types, non-nulls
+b.describe()     # Stats for numeric columns
+b.columns        # List of column names
+b.shape          # (rows, columns)
