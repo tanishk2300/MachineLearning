@@ -1,0 +1,23 @@
+Training ML Algorithm on Iris Dataset Just for example .
+This guide walks you through training a model on your own CSV dataset using scikit-learn.
+_____________________________________________________________
+1. Import Libraries
+import pandas as pd
+from sklearn.ensemble import RandomForestClassifier
+_____________________________________________________________
+2. Load Your CSV File
+data = pd.read_csv('data.csv')  # Replace with your actual CSV file path
+_____________________________________________________________
+3. Separate Features and Label
+X = data.iloc[:, :-1]  # All columns except the last as features
+y = data.iloc[:, -1]   # Last column as label
+_____________________________________________________________
+4. Train the Model
+model = RandomForestClassifier()
+model.fit(X, y)
+
+The model is now trained on your complete dataset.
+_____________________________________________________________
+5. Inference
+predictions = model.predict(X)  # Predict on the same/new data (for demonstration)
+print(predictions)  # Display predictions
