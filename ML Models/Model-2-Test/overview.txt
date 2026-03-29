@@ -1,0 +1,8 @@
+it help us to train model and find the accuracy of the prediction of model.
+
+# now,code of accuracy finding .
+count=0
+for i in range (0,len(actual)):
+    if actual[i]==predictions1[i]:
+        count=count+1
+print((count*100)/len(actual))
