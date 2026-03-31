@@ -1,0 +1,35 @@
+Exploratory Data Analysis (EDA) is the process of examining a dataset to summarize its main characteristics, often using visual methods or quick commands. The goal is to understand the structure of the data, detect patterns, spot anomalies, and get a feel for what kind of preprocessing or modeling might be needed.
+
+For our project, we’ll perform EDA on the California housing dataset (which we are treating as if it represents Gurgaon data). Here are some key commands we’ll use:
+_________________________________________________
+1. df.head()
+Displays the first 5 rows of the dataset.
+Useful for getting a quick overview of what the data looks like — column names, data types, and sample values.
+_________________________________________________
+2. df.info()
+Gives a summary of the dataset.
+Shows the number of entries, column names, data types, and how many non-null values each column has.
+Helps us identify missing values or incorrect data types.
+_________________________________________________
+3. df.describe()
+Provides statistical summaries for numeric columns.
+
+Shows:
+
+Count: Total number of non-null entries
+Mean: Average value
+Std: Standard deviation
+Min: The smallest value (0th percentile or 1st quartile in some contexts)
+25%: The 1st quartile (Q1) — 25% of the data is below this value
+50%: The median or 2nd quartile (Q2) — half of the data is below this value
+75%: The 3rd quartile (Q3) — 75% of the data is below this value
+Max: The largest value (often considered the 4th quartile or 100th percentile)
+Percentiles divide the data into 100 equal parts. Quartiles divide the data into 4 equal parts (Q1 = 25th percentile, Q2 = 50th, Q3 = 75th). So:
+
+Min is the 0th percentile
+Max is the 100th percentile
+This helps us understand how the values are spread out and if there are outliers.
+_________________________________________________
+4. df['column_name'].value_counts()
+Shows the count of each unique value in a specific column.
+Useful for categorical columns to see how values are distributed.
