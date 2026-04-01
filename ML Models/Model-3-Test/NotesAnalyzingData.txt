@@ -33,3 +33,13 @@ _________________________________________________
 4. df['column_name'].value_counts()
 Shows the count of each unique value in a specific column.
 Useful for categorical columns to see how values are distributed.
+
+_________________________________________________
+When building machine learning models, one of the most important steps is splitting your dataset into training and test sets. This ensures your model is evaluated on data it has never seen before, which is critical for assessing its ability to generalize.
+
+The Problem of Data Snooping Bias
+Data snooping bias occurs when information from the test set leaks into the training process. This can lead to overly optimistic performance metrics and models that don’t perform well in real-world scenarios.
+
+To avoid this, the test set must be isolated before any data exploration, feature selection, or model training begins.
+
+_________________________________________________
